@@ -1,8 +1,6 @@
 "use strict";
 
-
 const path = require("path");
-
 
 module.exports = {
   mode: "development", // could be "production" as well
@@ -13,5 +11,12 @@ module.exports = {
   },
   watch: true,
   devtool: "source-map",
-  module: {},
+  module: {
+    rules: [
+      {
+        test: /\.(css)$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };

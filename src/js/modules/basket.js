@@ -1,6 +1,7 @@
 export default function basket() {
   let itemBox = document.querySelectorAll(".item_box");
   let cartCont = document.getElementById("cart_content");
+  let minusElements;
 
   function count() {
     let count = 0;
@@ -70,18 +71,29 @@ export default function basket() {
 
     if (cartData !== null) {
       let cardTable = "";
+      // cardTable =
+      //   '<table class="shopping_list"><tr><th>Name</th><th>Price</th><th>Count</th><th>Remove product</th></tr>';
       cardTable =
-        '<table class="shopping_list"><tr><th>Name</th><th>Price</th><th>Count</th><th>Remove product</th></tr>';
-      for (let items in cartData) {
+        `<table class="shopping_list table table-hover">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Count</th>
+            <th>Remove product</th>
+          </tr>`;
+
+      
+        for (let items in cartData) {
         cardTable += "<tr>";
         for (let i = 0; i < cartData[items].length; i++) {
           cardTable += `<td>${cartData[items][i]}</td>`;
         }
-        cardTable += `<td><span class="minus" onclick="removeItem(this)" data-id="${items}">-</span></td></tr>`;
+        cardTable += `<td><span class="minus" data-id="${items}">-</span></td></tr>`;
       }
       cardTable += `<tr><td>Total price</td><td></td><td>${count()}</td><td></td></tr>`;
       cardTable += "<table>";
       cartCont.innerHTML = cardTable;
+      addMinusListener();
     } else {
       cartCont.innerHTML = "The shopping cart is empty!";
     }
@@ -91,6 +103,31 @@ export default function basket() {
     localStorage.removeItem("cart");
     cartCont.innerHTML = "The shopping cart cleared";
   }
+
+  function addMinusListener() {
+    minusElements = document.getElementsByClassName("minus");
+    for (let i = 0; i < minusElements.length; i++) {
+      minusElements[i].addEventListener("click", removeItem);
+    }
+  }
+  
+  function removeItem(minus) {
+    if (getCartData()) {
+      let cardData = getCartData();
+      let item = minus.target.getAttribute("data-id");
+      cardData[item][2] = cardData[item][2] - 1;
+      if (cardData[item][2] == 0) {
+        delete cardData[item];
+      }
+      setCartData(cardData);
+      let length = Object.getOwnPropertyNames(cardData);
+      if (length == 0) {
+        clearCart();
+      }
+      openCart();
+    }
+  }
+
 
   document.getElementById("clear_cart").addEventListener("click", clearCart);
 
