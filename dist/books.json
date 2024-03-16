@@ -2,19 +2,22 @@
   {
     "title": "Harry Potter and the Philosopher’s Stone",
     "author": "Joanne Rowling",
-    "cost": 190,
-    "quantity": 0
+    "imageCover": "https://www.britishbook.ua/upload/resize_cache/iblock/8f1/3wlmfqtbq3tzuiadhcj9zkv4mfxx11gs/1900_800_174b5ed2089e1946312e2a80dcd26f146/knyga_harry_potter_and_the_prisoner_of_azkaban_minalima_edition.jpg",
+    "price": 190,
+    "count": 0
   },
   {
     "title": "Death on the Nile",
     "author": "Agatha Christie",
-    "cost": 120,
-    "quantity": 0
+    "imageCover": "https://www.britishbook.ua/upload/resize_cache/iblock/8f1/3wlmfqtbq3tzuiadhcj9zkv4mfxx11gs/1900_800_174b5ed2089e1946312e2a80dcd26f146/knyga_harry_potter_and_the_prisoner_of_azkaban_minalima_edition.jpg",
+    "price": 120,
+    "count": 0
   },
   {
     "title": "The Lord of the Rings",
     "author": "John Ronald Reuel Tolkien",
-    "cost": 600,
-    "quantity": 0
+    "imageCover": "https://www.britishbook.ua/upload/resize_cache/iblock/8f1/3wlmfqtbq3tzuiadhcj9zkv4mfxx11gs/1900_800_174b5ed2089e1946312e2a80dcd26f146/knyga_harry_potter_and_the_prisoner_of_azkaban_minalima_edition.jpg",
+    "price": 600,
+    "count": 0
   }
 ]
