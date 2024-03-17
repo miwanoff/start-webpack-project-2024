@@ -5,9 +5,7 @@ export default function goods() {
       str += `<div class="bookWrap col-sm-4 col-12">`;
       str += `<div class="card text-center my-5 p-3">`;
 
-
       str += `<div class="card-title"><h5>${books[i].title}</h5></div>`;
-
 
       str += `<div class="image card-body"><img src="${books[i].imageCover}" /></div>`;
       str += `<div class="card-text"><p>${books[i].author}</p></div>`;
@@ -27,5 +25,5 @@ export default function goods() {
   }
   //loadBooks();
   document.getElementById("load").addEventListener("click", loadBooks);
+  // window.addEventListener("load", loadBooks);
 }
-

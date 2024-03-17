@@ -7497,7 +7497,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `#wrapper {
-  width: 50%;
+  /* width: 50%; */
   margin: 10px;
 }
 
@@ -7524,7 +7524,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `#wrapper {
   padding: 10px;
   border: 1px solid #aaaaaa;
 }
-`, "",{"version":3,"sources":["webpack://./src/css/basket.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,YAAY;EACZ,sBAAsB;AACxB;;AAEA;EACE,sBAAsB;EACtB,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,WAAW;EACX,gBAAgB;EAChB,yBAAyB;AAC3B;;AAEA;;EAEE,aAAa;EACb,yBAAyB;AAC3B","sourcesContent":["#wrapper {\r\n  width: 50%;\r\n  margin: 10px;\r\n}\r\n\r\n#cart_content {\r\n  margin-top: 10px;\r\n  padding: 5px;\r\n  border: 1px solid #060;\r\n}\r\n\r\n.item_box {\r\n  border: 1px solid #999;\r\n  margin-bottom: 10px;\r\n  padding: 5px;\r\n}\r\n\r\n.shopping_list {\r\n  width: 100%;\r\n  margin-top: 10px;\r\n  border-collapse: collapse;\r\n}\r\n\r\n.shopping_list td,\r\n.shopping_list th {\r\n  padding: 10px;\r\n  border: 1px solid #aaaaaa;\r\n}\r\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/css/basket.css"],"names":[],"mappings":"AAAA;EACE,gBAAgB;EAChB,YAAY;AACd;;AAEA;EACE,gBAAgB;EAChB,YAAY;EACZ,sBAAsB;AACxB;;AAEA;EACE,sBAAsB;EACtB,mBAAmB;EACnB,YAAY;AACd;;AAEA;EACE,WAAW;EACX,gBAAgB;EAChB,yBAAyB;AAC3B;;AAEA;;EAEE,aAAa;EACb,yBAAyB;AAC3B","sourcesContent":["#wrapper {\r\n  /* width: 50%; */\r\n  margin: 10px;\r\n}\r\n\r\n#cart_content {\r\n  margin-top: 10px;\r\n  padding: 5px;\r\n  border: 1px solid #060;\r\n}\r\n\r\n.item_box {\r\n  border: 1px solid #999;\r\n  margin-bottom: 10px;\r\n  padding: 5px;\r\n}\r\n\r\n.shopping_list {\r\n  width: 100%;\r\n  margin-top: 10px;\r\n  border-collapse: collapse;\r\n}\r\n\r\n.shopping_list td,\r\n.shopping_list th {\r\n  padding: 10px;\r\n  border: 1px solid #aaaaaa;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -8405,9 +8405,7 @@ function goods() {
       str += `<div class="bookWrap col-sm-4 col-12">`;
       str += `<div class="card text-center my-5 p-3">`;
 
-
       str += `<div class="card-title"><h5>${books[i].title}</h5></div>`;
-
 
       str += `<div class="image card-body"><img src="${books[i].imageCover}" /></div>`;
       str += `<div class="card-text"><p>${books[i].author}</p></div>`;
@@ -8427,8 +8425,8 @@ function goods() {
   }
   //loadBooks();
   document.getElementById("load").addEventListener("click", loadBooks);
+  // window.addEventListener("load", loadBooks);
 }
-
 
 
 /***/ }),
